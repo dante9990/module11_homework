@@ -1,5 +1,11 @@
-function sum(a, b) {
-    return a + b;
+export function getPercents(percent, number) {
+    let result;
+    if(isNaN(percent) || isNaN(number)) {
+        result = 'данные не число';
+    } else {
+        result = percent * number / 100;
+    }
+    return result;
 }
 
-module.exports = sum;
+getPercents(120, 300)
